@@ -48,7 +48,7 @@ steps:
       <protection id="constants" />
       <!-- <protection id="anti tamper" /> -->
       </rule>
-      <module path="D:\a\1\s\SharpChromium\bin\Release\SharpChromium.exe"/>
+      <module path="D:\a\1\s\bin\Release\SharpChromium.exe"/>
       </project>
       "@|Out-File -FilePath confuserex.crproj
       mkdir confused
@@ -63,7 +63,7 @@ steps:
 - task: AzureFileCopy@3
   name: UploadFile
   inputs:
-    SourcePath: 'D:\a\1\s\confused\SharpChromium\bin\Release\SharpChromium.exe'
+    SourcePath: 'D:\a\1\s\confused\bin\Release\SharpChromium.exe'
     azureSubscription: $(SubName)
     Destination: 'AzureBlob'
     storage: $(StorageAccount)
